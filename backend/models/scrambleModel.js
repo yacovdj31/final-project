@@ -1,28 +1,3 @@
-
-
-// const mongoose = require('mongoose');
-
-// const scrambleSchema = new mongoose.Schema({
-//     original: {
-//         type: String,
-//         required: true
-//     },
-//     scrambled: {
-//         type: String,
-//         required: true
-//     },
-//     user: {
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: 'User',
-//         required: true
-//     }
-// }, { timestamps: true }); 
-
-
-// module.exports = mongoose.model('Scramble', scrambleSchema);
-
-
-
 const mongoose = require('mongoose');
 
 const scrambleSchema = new mongoose.Schema({

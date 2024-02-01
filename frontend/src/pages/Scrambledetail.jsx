@@ -354,11 +354,9 @@ const ScrambleDetail = () => {
       <p>Scrambled: {scrambleItem?.scrambled}</p>
       </div>
 
-      {/* Star Rating */}
       <div className="scramble-star-rating">
         <label></label>
         <StarRating rating={rating} onRatingChange={(newRating) => setRating(newRating)} />
-        {/* <button onClick={handleSubmit}>Submit Comment and Rating</button> */}
       </div>
 
       <form className='input-button'>

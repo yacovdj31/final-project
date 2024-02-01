@@ -1,37 +1,3 @@
-
-
-// const mongoose = require("mongoose");
-
-// const Schema = mongoose.Schema;
-// const mathSchema = new Schema({
-//   num1: {
-//     type: Number,
-//     required: true,
-//   },
-//   num2: {
-//     type: Number,
-//     required: true,
-//   },
-//   operation: {
-//     type: String,
-//     required: true,
-//   },
-//   result: {
-//     type: Number,
-//     required: true,
-//   },
-//   user: {
-//     type: mongoose.Schema.Types.ObjectId,
-//     ref: 'User',
-//     required: true,
-//   },
-// }, { timestamps: true });
-
-// module.exports = mongoose.model('Math', mathSchema);
-
-
-
-
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;

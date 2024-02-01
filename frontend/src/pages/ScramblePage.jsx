@@ -59,9 +59,8 @@ const ScramblePage = () => {
     setWord("");
   };
 
-  // Rest of your component
   return (
-    <div className="scramble">
+    <div className="scrambles">
       <input
         className="input-word"
         value={word}

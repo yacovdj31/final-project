@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const StarRating = ({ rating, onRatingChange }) => {
-  const maxRating = 10; // You can adjust the maximum rating as needed
+  const maxRating = 10; 
   const stars = [];
 
   for (let i = 1; i <= maxRating; i++) {

@@ -1,7 +1,5 @@
-/* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
-/* layout */
 :root {
   --primary: #1aac83;
   --error: #e7195a;
@@ -17,8 +15,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff; /* Or any background color you prefer */
-  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  background-color: #fff; 
+  z-index: 1000; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -99,7 +97,6 @@ nav button {
   font-size: 1em;
 }
 
-/* auth forms */
 form.signup, form.login {
   max-width: 400px;
   margin: 40px auto;
@@ -141,8 +138,8 @@ form.signup, form.login {
 .math-questions-ul {
   background-color:rgb(185, 177, 177);
   padding: 50px;  
-   margin: 0; /* Remove default margin to align with the edges of its container */
-   overflow: auto; /* Ensure that the background extends even if content overflows */
+   margin: 0; 
+   overflow: auto; 
    border: 1px solid black; 
    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
    border-radius: 10px;
@@ -157,7 +154,7 @@ form.signup, form.login {
   width: 300px;
 }
 
-.scramble {
+.scrambles {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,8 +178,8 @@ form.signup, form.login {
 .scrambled-questions-ul {
   background-color:rgb(185, 177, 177);
   padding: 50px;  
-   margin: 0; /* Remove default margin to align with the edges of its container */
-   overflow: auto; /* Ensure that the background extends even if content overflows */
+   margin: 0; 
+   overflow: auto; 
    border: 1px solid black; 
    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
    border-radius: 10px;
@@ -217,11 +214,10 @@ form.signup, form.login {
 }
 
 .home-ul {
-  /* background-color:rgb(185, 177, 177); */
+ 
   padding: 50px;  
-   margin: 0; /* Remove default margin to align with the edges of its container */
-   overflow: auto; /* Ensure that the background extends even if content overflows */
-   /* border: 1px solid black;  */
+   margin: 0; 
+   overflow: auto; 
    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
    border-radius: 10px;
    display: flex;
@@ -263,7 +259,6 @@ form.signup, form.login {
   font-weight: 500;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  /* border: 2px solid #1aac83; */
   width: 300px;
 }
 
@@ -319,7 +314,6 @@ nav button:hover, .comment-button:hover {
 
 
 
-/* Add these styles to your CSS */
 
 .star-rating {
   display: flex;
@@ -328,16 +322,16 @@ nav button:hover, .comment-button:hover {
 }
 
 .star {
-  font-size: 24px; /* Adjust the size of the stars */
+  font-size: 24px;
   cursor: pointer;
 }
 
 .star-filled {
-  color: #1aac83; /* Color for filled stars */
+  color: #1aac83; 
 }
 
 .star-empty {
-  color: #ccc; /* Color for empty stars */
+  color: #ccc;
 }
 
 
@@ -345,7 +339,7 @@ nav button:hover, .comment-button:hover {
 @media (max-width: 1000px) {
   nav a,
   nav button {
-    font-size: 0.8em; /* Smaller font size for smaller screens */
+    font-size: 0.8em;
    }
    header .container {
     margin: 0 auto;
@@ -450,7 +444,7 @@ nav button:hover, .comment-button:hover {
 }
 
 .link {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none; 
 }
 
 
