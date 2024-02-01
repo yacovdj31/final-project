@@ -55,6 +55,8 @@
 //   console.error('Unhandled Rejection:', error);
 //   // Optional: perform specific cleanup or logging
 // });
+
+
 require('dotenv').config();
 
 const express = require('express');
@@ -68,12 +70,12 @@ const globalRoutes = require('./routes/global');
 
 const app = express();
 
-// Middleware
+// Middleware for parsing JSON bodies
 app.use(express.json());
 
-// Update CORS settings for production
+// Dynamic CORS settings
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' ? 'your-frontend-deployment-url' : 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL || '*', // Allow all origins if FRONTEND_URL is not set
 };
 app.use(cors(corsOptions));
 
@@ -82,7 +84,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Logging middleware for debugging purposes
 app.use((req, res, next) => {
-  console.log(req.path, req.method);
+  console.log(`${req.method} request for '${req.url}'`);
   next();
 });
 
@@ -92,12 +94,12 @@ app.use('/api/math', mathRoutes);
 app.use('/api/scramble', scrambleRoutes);
 app.use('/api/public', globalRoutes);
 
-// Connect to MongoDB and start the server
-mongoose.set('strictQuery', true); // or false, based on your preference
-mongoose.connect(process.env.MONGO_URI)
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    // Listen on the port provided by the environment for Vercel deployment
-    const PORT = process.env.PORT || 4001; // Fallback to 4001 if process.env.PORT is not set
+    console.log('Connected to DB');
+    // Starting the server
+    const PORT = process.env.PORT || 4001;
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
@@ -106,13 +108,12 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('Database connection failed:', error);
   });
 
-// Error handling for uncaught exceptions
+// Uncaught exceptions and unhandled promise rejections handlers
 process.on('uncaughtException', (error) => {
   console.error('Uncaught Exception:', error);
-  process.exit(1); // Exit for severe errors
+  process.exit(1); // Exit process for severe errors
 });
 
-// Error handling for unhandled promise rejections
 process.on('unhandledRejection', (error) => {
   console.error('Unhandled Rejection:', error);
 });
