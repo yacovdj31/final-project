@@ -379,7 +379,7 @@ const ScrambleDetail = () => {
             scrambleItem.comments.map((comment, index) => (
               <li className="comments" key={index}>
                {comment.rating} 
-               {comment.text} <br></br>- {' '}
+               {comment.text} <br></br> {' '}
                 <span className=''>{new Date(comment.createdAt).toLocaleString()}</span>
               </li>
             ))}

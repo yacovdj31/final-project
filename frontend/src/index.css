@@ -10,10 +10,19 @@ body {
   background: #f1f1f1;
   margin: 0;
   font-family: "Poppins";
+  padding-top: 60px;
 }
 header {
   background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; /* Or any background color you prefer */
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+
 header .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -32,42 +41,12 @@ header a {
   margin: 0 auto;
 }
 
-/* homepage */
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 100px;
 }
-/* .workout-details {
-  background: #fff;
-  border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-}
-.workout-details h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
-  color: var(--primary);
-}
-.workout-details p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #555;
-}
-.workout-details span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
-  color: #333;
-} */
 
-/* new workout form */
 label, input {
   display: block;
 }
@@ -101,7 +80,7 @@ input.error {
   border: 1px solid var(--error);
 }
 
-/* navbar */
+
 nav {
   display: flex;
   align-items: center;
@@ -333,6 +312,11 @@ nav button:hover, .comment-button:hover {
 
 }
 
+.difficulty {
+  color: black;
+  font-weight: 700;
+}
+
 
 
 /* Add these styles to your CSS */
@@ -349,7 +333,7 @@ nav button:hover, .comment-button:hover {
 }
 
 .star-filled {
-  color: gold; /* Color for filled stars */
+  color: #1aac83; /* Color for filled stars */
 }
 
 .star-empty {
@@ -397,7 +381,7 @@ nav button:hover, .comment-button:hover {
   border-radius: 10px;
   border: 1px solid black;
   width: 400px;
-  border: 1px solid #1aac83;
+  border: 1px solid black;
 
 }
 
@@ -429,7 +413,7 @@ nav button:hover, .comment-button:hover {
   border-radius: 10px;
   border: 1px solid black;
   width: 400px;
-  border: 1px solid #1aac83;
+  border: 1px solid black;
   max-width: 400px;
 }
 
@@ -467,4 +451,25 @@ nav button:hover, .comment-button:hover {
 
 .link {
   text-decoration: none; /* Remove underline */
+}
+
+
+.profile-items-math {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(67, 118, 194);
+  margin-top: 10px;
+  list-style-type: none;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: rgb(241, 234, 234);
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 400px;
+  border: 1px solid #1aac83;
+  max-width: 400px;
+
 }
